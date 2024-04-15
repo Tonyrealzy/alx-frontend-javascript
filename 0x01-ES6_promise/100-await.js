@@ -18,9 +18,9 @@ export default async function asyncUploadUser() {
   }
 }
 
-const test = async () => {
-  const valuedResponse = await asyncUploadUser();
-  console.log(valuedResponse);
-};
+// const testFunction = async () => {
+//   const valuedResponse = await asyncUploadUser();
+//   console.log(valuedResponse);
+// };
 
-test();
+// testFunction();
