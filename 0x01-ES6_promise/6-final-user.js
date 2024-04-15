@@ -9,11 +9,10 @@ export default async function handleProfileSignup(firstName, lastName, fileName)
     return [
       { status: 'fulfilled', value: { userResponse, photoResponse } },
     ];
-  }
-  catch (error) {
+  } catch (error) {
     console.log('Signup error: ', error);
     return [
       { status: 'rejected', value: error },
     ];
-  };
+  }
 }
