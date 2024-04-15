@@ -1,0 +1,1 @@
+### This repository contains all directories and project files for my alx-frontend-javascript tasks.
