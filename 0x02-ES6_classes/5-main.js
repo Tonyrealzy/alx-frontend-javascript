@@ -10,4 +10,8 @@ try {
 }
 catch(err) {
     console.log(err);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> d3facd9655bcc410fe94ccd3ca67b4320d4797e0

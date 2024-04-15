@@ -1,19 +1,26 @@
 import { uploadPhoto, createUser } from './utils';
 
-export default async function asyncUploadUser(firstName, lastName, fileName) {
-  const [
-    responseFromUploadPhotoFunction,
-    responseFromCreateUserFunction] = await Promise.all([
-    uploadPhoto(fileName),
-    createUser(firstName, lastName)]);
-
+export default async function asyncUploadUser() {
   try {
+    const [
+      responseFromUploadPhotoFunction,
+      responseFromCreateUserFunction] = await Promise.all([
+      uploadPhoto(),
+      createUser()]);
+
     return {
       photo: responseFromUploadPhotoFunction,
       user: responseFromCreateUserFunction,
     };
   } catch (error) {
+    console.log('Signup error: ', error);
     return {};
   }
 }
-module.exports = asyncUploadUser();
+
+const test = async () => {
+  const valuedResponse = await asyncUploadUser();
+  console.log(valuedResponse);
+};
+
+test();
