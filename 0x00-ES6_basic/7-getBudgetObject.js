@@ -3,7 +3,7 @@ const getBudgetObject = (income, gdp, capita) => {
     income: income, 
     gdp: gdp, 
     capita: capita
-  }
-  return budget
+  };
+  return budget;
 }
 export default getBudgetObject
