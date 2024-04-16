@@ -10,7 +10,7 @@ export default function queryAPI(endpoint) {
     if (!count) {
         count = 0;
     }
-    count++;
+    count += 1;
 
     if (count >= 5) {
         throw new Error('Endpoint load is high');

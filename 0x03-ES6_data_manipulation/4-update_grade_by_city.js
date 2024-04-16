@@ -3,9 +3,9 @@ export default function updateStudentGradeByCity(arrayObject, city, newGrades) {
         return [];
     }
     return arrayObject
-    .filter((el) => {
+    .filter((el) => 
         el.location === city
-    })
+    )
     .map((el) => {
         for (const gr of newGrades) {
             if (!gr.grade) {
