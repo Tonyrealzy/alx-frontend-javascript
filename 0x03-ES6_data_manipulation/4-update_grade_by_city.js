@@ -10,7 +10,7 @@ export default function updateStudentGradeByCity(arrayObject, city, newGrades) {
           el.grade = gr.grade;
         }
         if (!gr.grade) {
-          gr.grade = 'N/A';
+          el.grade = 'N/A';
         }
       }
       return el;
