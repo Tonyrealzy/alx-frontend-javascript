@@ -7,7 +7,7 @@ export default function queryAPI(endpoint) {
 
   let count = weakMap.get(endpoint);
 
-  if (!count) {
+  if (!count || count === undefined) {
     count = 0;
   }
   count += 1;
@@ -17,6 +17,6 @@ export default function queryAPI(endpoint) {
   }
   
   weakMap.set(endpoint, count);
-  
+
   return count;
 }
