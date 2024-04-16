@@ -10,12 +10,11 @@ export default function queryAPI(endpoint) {
   if (!count) {
     count = 0;
   }
-  count += 1;
-
+  weakMap.set(endpoint, count);
   if (count >= 5) {
     throw new Error('Endpoint load is high');
   }
-
-  weakMap.set(endpoint, count);
-  console.log(`Calling API endpoint: ${endpoint.protocol}: ${endpoint.name}`);
+  count += 1;
+  
+  return count;
 }
