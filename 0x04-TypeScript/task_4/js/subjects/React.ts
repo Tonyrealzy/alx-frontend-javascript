@@ -3,6 +3,7 @@ export namespace Subjects {
         firstName: string;
         lastName: string;
         experienceTeachingC?: number;
+        experienceTeachingReact?: number;
     }
 
     export class Subject {
@@ -19,7 +20,26 @@ export namespace Subjects {
         }
         getAvailableTeacher(): string {
             if (this.teacher && this.teacher.experienceTeachingC) {
-                return 'Available Teacher: ${this.teacher.firstName}';
+                return `Available Teacher: ${this.teacher.firstName}`;
+            } else {
+                return 'No available teacher';
+            }
+        }
+    }
+
+    export class React {
+        private teacher?: Teacher;
+
+        constructor(teacher?: Teacher) {
+            this.teacher = teacher;
+        };
+
+        getRequirements(): string {
+            return 'Here is the list of requirements for React';
+        }
+        getAvailableTeacher(): string {
+            if (this.teacher && this.teacher.experienceTeachingReact) {
+                return `Available Teacher: ${this.teacher.firstName}`;
             } else {
                 return 'No available teacher';
             }
