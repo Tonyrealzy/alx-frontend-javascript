@@ -1,0 +1,1 @@
+### This directory contains project files for my 0x04-TypeScript tasks.
