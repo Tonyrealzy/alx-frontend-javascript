@@ -1,1 +1,0 @@
-### This directory contains project files for my ALX 0x00-html_advanced tasks.

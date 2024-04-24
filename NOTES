@@ -8,3 +8,8 @@ npm run lint -- *.js --fix
 ### To generate a new ssh key:
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 This creates a new SSH key, using the provided email as a label.
+
+### To test your TypeScript files:
+npm run build
+OR
+npm run start-dev
